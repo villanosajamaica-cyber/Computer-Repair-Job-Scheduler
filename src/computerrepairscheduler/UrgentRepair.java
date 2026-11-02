@@ -1,13 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package computerrepairscheduler;
 
-/**
- *
- * @author USER
- */
-public class UrgentRepair {
-    
+public class UrgentRepair extends RepairJob {
+
+    private String urgencyLevel;
+
+    public UrgentRepair(String jobId, String customerName,
+            String deviceName, String problemDescription,
+            String urgencyLevel) {
+
+        super(jobId, customerName, deviceName, problemDescription);
+
+        this.urgencyLevel = urgencyLevel;
+    }
+
+    public String getUrgencyLevel() {
+        return urgencyLevel;
+    }
+
+    public void setUrgencyLevel(String urgencyLevel) {
+        if (urgencyLevel != null && !urgencyLevel.trim().isEmpty()) {
+            this.urgencyLevel = urgencyLevel;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + " | Urgency Level: " + urgencyLevel;
+    }
 }
