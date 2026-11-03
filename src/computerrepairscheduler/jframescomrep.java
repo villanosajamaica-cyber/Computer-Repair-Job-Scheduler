@@ -108,6 +108,11 @@ public class jframescomrep extends javax.swing.JFrame {
         });
 
         btnRemoveNext.setText("REMOVE NEXT");
+        btnRemoveNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveNextActionPerformed(evt);
+            }
+        });
 
         txtSearch.setText("Search Repair Job");
 
@@ -338,6 +343,24 @@ lblSearchResult.setText(
         "Search result will appear here.");
 
     }//GEN-LAST:event_lblSearchResultActionPerformed
+
+    private void btnRemoveNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveNextActionPerformed
+        if (queue.isEmpty()) {
+    javax.swing.JOptionPane.showMessageDialog(
+            this, "The repair queue is empty.");
+    return;
+}
+
+RepairJob removed = queue.dequeue();
+
+javax.swing.JOptionPane.showMessageDialog(
+        this,
+        "Removed repair job:\n" + removed.toString(),
+        "Job Removed",
+        javax.swing.JOptionPane.INFORMATION_MESSAGE);
+
+txtRecords.setText(queue.displayAll());
+    }//GEN-LAST:event_btnRemoveNextActionPerformed
 
     /**
      * @param args the command line arguments
