@@ -234,7 +234,38 @@ public class jframescomrep extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        // TODO add your handling code here:
+        
+String jobId = txtSearch.getText().trim();
+
+// Check if the search field is empty
+if (jobId.isEmpty()) {
+    javax.swing.JOptionPane.showMessageDialog(
+            this, "Please enter a Job ID.");
+    return;
+}
+
+// Search for the repair job in the Queue
+RepairJob found = queue.search(jobId);
+
+if (found != null) {
+
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            found.toString(),
+            "Repair Job Found",
+            javax.swing.JOptionPane.INFORMATION_MESSAGE
+    );
+
+} else {
+
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "No repair job found with ID: " + jobId,
+            "Search Result",
+            javax.swing.JOptionPane.WARNING_MESSAGE
+    );
+}
+
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
