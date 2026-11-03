@@ -1,11 +1,8 @@
-
 package computerrepairscheduler;
-
 
 public class jframescomrep extends javax.swing.JFrame {
     private RepairJobQueue queue = new RepairJobQueue(100);
 
-    
     public jframescomrep() {
         initComponents();
     }
@@ -33,7 +30,7 @@ public class jframescomrep extends javax.swing.JFrame {
         txtProblem = new javax.swing.JLabel();
         txtTime = new javax.swing.JLabel();
         btnAdd = new javax.swing.JButton();
-        btnClear = new javax.swing.JButton();
+        lblSearchResult = new javax.swing.JButton();
         btnRemoveNext = new javax.swing.JButton();
         txtSearch = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
@@ -103,7 +100,12 @@ public class jframescomrep extends javax.swing.JFrame {
             }
         });
 
-        btnClear.setText("CLEAR");
+        lblSearchResult.setText("CLEAR");
+        lblSearchResult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lblSearchResultActionPerformed(evt);
+            }
+        });
 
         btnRemoveNext.setText("REMOVE NEXT");
 
@@ -160,7 +162,7 @@ public class jframescomrep extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnAdd)
                         .addGap(18, 18, 18)
-                        .addComponent(btnClear)
+                        .addComponent(lblSearchResult)
                         .addGap(18, 18, 18)
                         .addComponent(btnRemoveNext)))
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -203,7 +205,7 @@ public class jframescomrep extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
-                    .addComponent(btnClear)
+                    .addComponent(lblSearchResult)
                     .addComponent(btnRemoveNext))
                 .addGap(28, 28, 28)
                 .addComponent(txtSearch)
@@ -322,6 +324,21 @@ if (queue.enqueue(job)) {
         
     }//GEN-LAST:event_btnAddActionPerformed
 
+    private void lblSearchResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblSearchResultActionPerformed
+        
+txtJobId.setText("");
+txtCustomerName.setText("");
+txtDeviceName.setText("");
+txtProblem.setText("");
+txtDate.setText("");
+txtTime.setText("");
+txtSearch.setText("");
+
+lblSearchResult.setText(
+        "Search result will appear here.");
+
+    }//GEN-LAST:event_lblSearchResultActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -359,7 +376,6 @@ if (queue.enqueue(job)) {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
-    private javax.swing.JButton btnClear;
     private javax.swing.JButton btnRemoveNext;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton jButton4;
@@ -375,6 +391,7 @@ if (queue.enqueue(job)) {
     private javax.swing.JTextField lblCustomerName;
     private javax.swing.JTextField lblJobId;
     private javax.swing.JLabel lblRepairInfo;
+    private javax.swing.JButton lblSearchResult;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel txtCustomerName;
     private javax.swing.JLabel txtDate;
