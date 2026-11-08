@@ -57,54 +57,58 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lblQueueTitle" min="-2" pref="105" max="-2" attributes="0"/>
-                  <Component id="lblRepairInfo" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="lblRepairType" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cmbRepairType" alignment="0" pref="293" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtDate" alignment="1" pref="293" max="32767" attributes="0"/>
-                          <Component id="lblJobId" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="txtJobID" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblDeviceName" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtDeviceName" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblAppointmentDate" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                          <Component id="txtJobId" alignment="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="lblQueueTitle" min="-2" pref="105" max="-2" attributes="0"/>
+                      <Component id="lblRepairInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="lblRepairType" alignment="0" max="32767" attributes="0"/>
+                          <Component id="cmbRepairType" alignment="0" pref="293" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="lblUrgencyLevel" max="32767" attributes="0"/>
-                                  <Component id="cmbUrgencyLevel" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="lblCostumerName" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtDate" alignment="1" pref="293" max="32767" attributes="0"/>
+                              <Component id="lblJobId" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="txtJobID" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblDeviceName" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDeviceName" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblAppointmentDate" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="txtJobId" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblSearchResult" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="lblUrgencyLevel" max="32767" attributes="0"/>
+                                      <Component id="cmbUrgencyLevel" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="lblCostumerName" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lblProblemDescription" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtProblem" pref="293" max="32767" attributes="0"/>
+                                      <Component id="txtCustomerName" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblAppointmentTime" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
+                                      <Component id="txtTime" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="lblProblemDescription" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtProblem" pref="293" max="32767" attributes="0"/>
-                                  <Component id="txtCustomerName" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="lblAppointmentTime" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
-                                  <Component id="txtTime" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      </Group>
+                      <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnClear" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnRemoveNext" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnClear" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="btnRemoveNext" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblEnterJobID" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
@@ -157,18 +161,22 @@
                   <Component id="cmbRepairType" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cmbUrgencyLevel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnRemoveNext" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Component id="lblEnterJobID" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtJobId" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                   <Component id="btnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblSearchResult" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
               <Component id="lblQueueTitle" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="48" max="-2" attributes="0"/>
@@ -279,9 +287,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtJobId">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Enter Job ID"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnSearch">
       <Properties>
@@ -353,6 +358,16 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblSearchResult">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search result will appear here."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblEnterJobID">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter Job ID"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -43,6 +43,8 @@ public class jframescomrep extends javax.swing.JFrame {
         lblRepairType = new javax.swing.JLabel();
         lblUrgencyLevel = new javax.swing.JLabel();
         cmbUrgencyLevel = new javax.swing.JComboBox<>();
+        lblSearchResult = new javax.swing.JLabel();
+        lblEnterJobID = new javax.swing.JLabel();
 
         jTextField5.setText("YYYY-MM-DD");
 
@@ -121,8 +123,6 @@ public class jframescomrep extends javax.swing.JFrame {
             }
         });
 
-        txtJobId.setText("Enter Job ID");
-
         btnSearch.setText("SEARCH");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +150,10 @@ public class jframescomrep extends javax.swing.JFrame {
             }
         });
 
+        lblSearchResult.setText("Search result will appear here.");
+
+        lblEnterJobID.setText("Enter Job ID");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -160,45 +164,48 @@ public class jframescomrep extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblQueueTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblRepairInfo)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(lblRepairType, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cmbRepairType, javax.swing.GroupLayout.Alignment.LEADING, 0, 293, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                            .addComponent(lblJobId, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtJobID)
-                            .addComponent(lblDeviceName)
-                            .addComponent(txtDeviceName)
-                            .addComponent(lblAppointmentDate, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtJobId))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lblUrgencyLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cmbUrgencyLevel, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblCostumerName)
-                                        .addGap(57, 57, 57))
-                                    .addComponent(lblProblemDescription)
-                                    .addComponent(txtProblem, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                                    .addComponent(txtCustomerName)
-                                    .addComponent(lblAppointmentTime, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtTime)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(btnSearch))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAdd)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnClear)
-                        .addGap(27, 27, 27)
-                        .addComponent(btnRemoveNext))
-                    .addComponent(jScrollPane1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lblQueueTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblRepairInfo)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(lblRepairType, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbRepairType, javax.swing.GroupLayout.Alignment.LEADING, 0, 293, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                                .addComponent(lblJobId, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtJobID)
+                                .addComponent(lblDeviceName)
+                                .addComponent(txtDeviceName)
+                                .addComponent(lblAppointmentDate, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtJobId)
+                                .addComponent(lblSearchResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(38, 38, 38)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(lblUrgencyLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cmbUrgencyLevel, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(lblCostumerName)
+                                            .addGap(57, 57, 57))
+                                        .addComponent(lblProblemDescription)
+                                        .addComponent(txtProblem, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                                        .addComponent(txtCustomerName)
+                                        .addComponent(lblAppointmentTime, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtTime)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(27, 27, 27)
+                                    .addComponent(btnSearch))))
+                        .addComponent(jScrollPane1)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnAdd)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnClear)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnRemoveNext)))
+                    .addComponent(lblEnterJobID))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -240,16 +247,20 @@ public class jframescomrep extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmbRepairType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmbUrgencyLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
                     .addComponent(btnClear)
                     .addComponent(btnRemoveNext))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(lblEnterJobID)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtJobId, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearch))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblSearchResult)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(lblQueueTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -272,37 +283,26 @@ public class jframescomrep extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTimeActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        
+
 String jobId = txtSearch.getText().trim();
 
-// Check if the search field is empty
 if (jobId.isEmpty()) {
-    javax.swing.JOptionPane.showMessageDialog(
-            this, "Please enter a Job ID.");
+    lblSearchResult.setText("Please enter a Job ID.");
     return;
 }
 
-// Search for the repair job in the Queue
 RepairJob found = queue.search(jobId);
 
 if (found != null) {
-
-    javax.swing.JOptionPane.showMessageDialog(
-            this,
-            found.toString(),
-            "Repair Job Found",
-            javax.swing.JOptionPane.INFORMATION_MESSAGE
+    lblSearchResult.setText(
+            "<html>" + found.toString().replace("\n", "<br>") + "</html>"
     );
-
 } else {
-
-    javax.swing.JOptionPane.showMessageDialog(
-            this,
-            "No repair job found with ID: " + jobId,
-            "Search Result",
-            javax.swing.JOptionPane.WARNING_MESSAGE
+    lblSearchResult.setText(
+            "No repair job found with ID: " + jobId
     );
 }
+
 
     }//GEN-LAST:event_btnSearchActionPerformed
 
@@ -473,11 +473,13 @@ txtRecords.setText(queue.displayAll());
     private javax.swing.JLabel lblAppointmentTime;
     private javax.swing.JLabel lblCostumerName;
     private javax.swing.JLabel lblDeviceName;
+    private javax.swing.JLabel lblEnterJobID;
     private javax.swing.JLabel lblJobId;
     private javax.swing.JLabel lblProblemDescription;
     private javax.swing.JLabel lblQueueTitle;
     private javax.swing.JLabel lblRepairInfo;
     private javax.swing.JLabel lblRepairType;
+    private javax.swing.JLabel lblSearchResult;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblUrgencyLevel;
     private javax.swing.JTextField txtCustomerName;
