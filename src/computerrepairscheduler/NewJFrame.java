@@ -123,6 +123,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         btnRemoveNext.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnRemoveNext.setText("REMOVED NEXT");
+        btnRemoveNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveNextActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -343,6 +348,24 @@ if (queue.enqueue(job)) {
 
     lblSearchResult.setText("Search result will appear here.");
     }//GEN-LAST:event_btnClearActionPerformed
+
+    private void btnRemoveNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveNextActionPerformed
+        if (queue.isEmpty()) {
+    javax.swing.JOptionPane.showMessageDialog(
+            this, "The repair queue is empty.");
+    return;
+}
+
+RepairJob removed = queue.dequeue();
+
+javax.swing.JOptionPane.showMessageDialog(
+        this,
+        "Removed repair job:\n" + removed.toString(),
+        "Job Removed",
+        javax.swing.JOptionPane.INFORMATION_MESSAGE);
+
+txtRecords.setText(queue.displayAll());
+    }//GEN-LAST:event_btnRemoveNextActionPerformed
 
     public static void main(String args[]) {
 
