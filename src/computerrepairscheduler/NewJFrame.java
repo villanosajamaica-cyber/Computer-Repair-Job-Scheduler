@@ -248,7 +248,24 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        // TODO add your handling code here:
+        String jobId = txtSearch.getText().trim();
+
+if (jobId.isEmpty()) {
+    lblSearchResult.setText("Please enter a Job ID.");
+    return;
+}
+
+RepairJob found = queue.search(jobId);
+
+if (found != null) {
+    lblSearchResult.setText(
+        "<html>" + found.toString().replace("\n", "<br>") + "</html>"
+    );
+} else {
+    lblSearchResult.setText(
+        "No repair job found with ID: " + jobId
+    );
+}
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
