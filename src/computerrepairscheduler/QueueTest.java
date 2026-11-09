@@ -47,5 +47,23 @@ public class QueueTest {
         System.out.println(queue.peek());
 
         System.out.println("\nQueue size: " + queue.getSize());
+        
+        // Test queue underflow
+System.out.println("\nTEST EMPTY QUEUE:");
+
+while (!queue.isEmpty()) {
+    queue.dequeue();
+}
+
+System.out.println("Dequeue empty queue: " + queue.dequeue());
+
+// Test queue overflow
+System.out.println("\nTEST QUEUE OVERFLOW:");
+
+RepairJobQueue smallQueue = new RepairJobQueue(1);
+
+System.out.println("Add first job: " + smallQueue.enqueue(job1));
+System.out.println("Add second job: " + smallQueue.enqueue(job2));
+System.out.println("Is queue full: " + smallQueue.isFull());
     }
 }
