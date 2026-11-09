@@ -10,6 +10,10 @@ public class UrgentRepair extends RepairJob {
 
         super(jobId, customerName, deviceName, problemDescription);
 
+        if (urgencyLevel == null || urgencyLevel.trim().isEmpty()) {
+    throw new IllegalArgumentException("Urgency level is required.");
+}
+
         this.urgencyLevel = urgencyLevel;
     }
 
