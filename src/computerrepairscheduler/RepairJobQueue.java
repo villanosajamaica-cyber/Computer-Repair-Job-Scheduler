@@ -11,7 +11,7 @@ public class RepairJobQueue {
     public RepairJobQueue(int capacity) {
         if (capacity <= 0) {
             throw new IllegalArgumentException(
-                    "Capacity must be greater than zero.");
+            "Capacity must be greater than zero.");
         }
 
         this.capacity = capacity;

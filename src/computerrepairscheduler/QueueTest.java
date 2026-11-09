@@ -1,4 +1,3 @@
-
 package computerrepairscheduler;
 
 public class QueueTest {
@@ -8,11 +7,11 @@ public class QueueTest {
         RepairJobQueue queue = new RepairJobQueue(5);
 
         RepairJob job1 = new ScheduledRepair(
-                "J001", "Juan", "Laptop",
+                "J001", "Jamaica", "Laptop",
                 "Broken screen", "2026-11-05", "09:00 AM");
 
         RepairJob job2 = new UrgentRepair(
-                "J002", "Maria", "Desktop",
+                "J002", "Ralph Roger", "Desktop",
                 "Computer will not start", "High");
 
         // Test enqueue
