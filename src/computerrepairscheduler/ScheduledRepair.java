@@ -11,8 +11,16 @@ public class ScheduledRepair extends RepairJob {
 
         super(jobId, customerName, deviceName, problemDescription);
 
-        this.appointmentDate = appointmentDate;
-        this.appointmentTime = appointmentTime;
+        if (appointmentDate == null || appointmentDate.trim().isEmpty()) {
+    throw new IllegalArgumentException("Appointment date is required.");
+}
+
+if (appointmentTime == null || appointmentTime.trim().isEmpty()) {
+    throw new IllegalArgumentException("Appointment time is required.");
+}
+
+this.appointmentDate = appointmentDate;
+this.appointmentTime = appointmentTime;
     }
 
     public String getAppointmentDate() {
