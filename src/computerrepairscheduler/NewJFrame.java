@@ -40,6 +40,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtRecords = new javax.swing.JTextArea();
         btnRemoveNext = new javax.swing.JButton();
+        lblDateFormat = new javax.swing.JLabel();
+        lblTimeFormat = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Computer Repair Job Scheduler");
@@ -116,6 +118,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         lblSearchResult.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lblSearchResult.setForeground(new java.awt.Color(102, 102, 102));
         lblSearchResult.setText("Search result will appear here.");
 
         lblQueueTitle.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -127,12 +130,20 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtRecords);
 
         btnRemoveNext.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        btnRemoveNext.setText("REMOVED NEXT");
+        btnRemoveNext.setText("REMOVE NEXT");
         btnRemoveNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoveNextActionPerformed(evt);
             }
         });
+
+        lblDateFormat.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        lblDateFormat.setForeground(new java.awt.Color(102, 102, 102));
+        lblDateFormat.setText("Format: YYYY-MM-DD (e.g., 2026-11-10)");
+
+        lblTimeFormat.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        lblTimeFormat.setForeground(new java.awt.Color(102, 102, 102));
+        lblTimeFormat.setText("Format: hh:mm AM/PM (e.g., 09:00 AM)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,6 +156,14 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSearchTitle)
+                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSearchResult)
+                            .addComponent(lblQueueTitle)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnRemoveNext))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblDate)
@@ -158,26 +177,20 @@ public class NewJFrame extends javax.swing.JFrame {
                                     .addComponent(btnAdd))
                                 .addGap(50, 50, 50)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cmbUrgencyLevel, 0, 125, Short.MAX_VALUE)
-                                    .addComponent(cmbRepairType, 0, 364, Short.MAX_VALUE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(btnClear)
+                                        .addComponent(btnSearch)
+                                        .addComponent(cmbUrgencyLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cmbRepairType, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(txtDeviceName)
                                             .addComponent(txtProblem)
                                             .addComponent(txtTime, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
                                             .addComponent(txtCustomerName))
-                                        .addComponent(btnSearch))
+                                        .addComponent(lblTimeFormat, javax.swing.GroupLayout.Alignment.LEADING))
                                     .addComponent(txtJobId)
-                                    .addComponent(txtDate)))
-                            .addComponent(lblSearchTitle)
-                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSearchResult)
-                            .addComponent(lblQueueTitle)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnRemoveNext)))
+                                    .addComponent(txtDate)
+                                    .addComponent(lblDateFormat))))
                         .addGap(19, 19, 19))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,19 +231,23 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblDate)
                     .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
+                .addGap(2, 2, 2)
+                .addComponent(lblDateFormat)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
+                .addComponent(lblTimeFormat)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRepairType)
                     .addComponent(cmbRepairType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUrgencyLevel)
                     .addComponent(cmbUrgencyLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
                     .addComponent(btnClear))
@@ -248,7 +265,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(22, Short.MAX_VALUE))
+                        .addContainerGap(16, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnRemoveNext)
@@ -431,6 +448,7 @@ txtRecords.setText(queue.displayAll());
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCustomerName;
     private javax.swing.JLabel lblDate;
+    private javax.swing.JLabel lblDateFormat;
     private javax.swing.JLabel lblDescription;
     private javax.swing.JLabel lblDeviceName;
     private javax.swing.JLabel lblJobId;
@@ -441,6 +459,7 @@ txtRecords.setText(queue.displayAll());
     private javax.swing.JLabel lblSearchResult;
     private javax.swing.JLabel lblSearchTitle;
     private javax.swing.JLabel lblTime;
+    private javax.swing.JLabel lblTimeFormat;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblUrgencyLevel;
     private javax.swing.JTextField txtCustomerName;

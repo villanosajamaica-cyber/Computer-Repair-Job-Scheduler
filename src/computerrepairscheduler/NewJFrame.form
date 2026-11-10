@@ -34,7 +34,16 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Component id="lblSearchTitle" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtSearch" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
+                          <Component id="lblSearchResult" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblQueueTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jScrollPane1" min="-2" pref="421" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnRemoveNext" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lblDate" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblJobId" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
@@ -48,30 +57,23 @@
                               </Group>
                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="cmbUrgencyLevel" alignment="0" pref="125" max="32767" attributes="0"/>
-                                  <Component id="cmbRepairType" alignment="0" pref="364" max="32767" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                       <Component id="btnClear" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="btnSearch" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cmbUrgencyLevel" alignment="1" min="-2" pref="364" max="-2" attributes="0"/>
+                                      <Component id="cmbRepairType" alignment="1" min="-2" pref="364" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="txtDeviceName" max="32767" attributes="0"/>
                                           <Component id="txtProblem" max="32767" attributes="0"/>
                                           <Component id="txtTime" pref="364" max="32767" attributes="0"/>
                                           <Component id="txtCustomerName" alignment="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="btnSearch" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblTimeFormat" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="txtJobId" max="32767" attributes="0"/>
                                   <Component id="txtDate" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblDateFormat" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Component id="lblSearchTitle" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtSearch" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
-                          <Component id="lblSearchResult" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblQueueTitle" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jScrollPane1" min="-2" pref="421" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnRemoveNext" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
@@ -127,22 +129,26 @@
                   <Component id="lblDate" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="txtDate" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+              <Component id="lblDateFormat" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtTime" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblTime" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="lblTimeFormat" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblRepairType" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cmbRepairType" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblUrgencyLevel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cmbUrgencyLevel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -162,7 +168,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -356,6 +362,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="12" style="0"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="66" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Search result will appear here."/>
       </Properties>
     </Component>
@@ -388,11 +397,33 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="12" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="REMOVED NEXT"/>
+        <Property name="text" type="java.lang.String" value="REMOVE NEXT"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveNextActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDateFormat">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="10" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="66" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Format: YYYY-MM-DD (e.g., 2026-11-10)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTimeFormat">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="10" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="66" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Format: hh:mm AM/PM (e.g., 09:00 AM)"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
