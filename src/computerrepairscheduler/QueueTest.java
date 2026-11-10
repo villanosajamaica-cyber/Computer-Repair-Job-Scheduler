@@ -47,9 +47,14 @@ public class QueueTest {
         System.out.println(queue.peek());
 
         System.out.println("\nQueue size: " + queue.getSize());
+        System.out.println("\nTEST COMPLETED STATUS:");
+
+        job2.markAsCompleted();
+
+        System.out.println("Updated status: " + job2.getStatus());
         
         // Test queue underflow
-System.out.println("\nTEST EMPTY QUEUE:");
+        System.out.println("\nTEST EMPTY QUEUE:");
 
 while (!queue.isEmpty()) {
     queue.dequeue();

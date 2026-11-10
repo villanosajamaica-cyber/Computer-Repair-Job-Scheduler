@@ -41,9 +41,12 @@ public class RepairJob {
     public void setStatus(String status) {
         if (status != null && !status.trim().isEmpty()) {
             this.status = status;
+            
         }
     }
-
+    public void markAsCompleted() {
+    this.status = "Completed";
+}
     @Override
     public String toString() {
         return "Job ID: " + jobId
