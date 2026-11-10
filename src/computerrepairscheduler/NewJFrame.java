@@ -303,12 +303,30 @@ if (repairType.equals("Scheduled Repair")) {
     String time = txtTime.getText().trim();
 
     if (date.isEmpty() || time.isEmpty()
-            || date.equals("YYYY-MM-DD")
-            || time.equals("e.g. 09:00 AM")) {
-        javax.swing.JOptionPane.showMessageDialog(
-                this, "Please enter the appointment date and time.");
-        return;
-    }
+        || date.equals("YYYY-MM-DD")
+        || time.equals("e.g. 09:00 AM")) {
+
+    javax.swing.JOptionPane.showMessageDialog(
+            this, "Please enter the appointment date and time.");
+    return;
+}
+
+// Validate appointment date
+try {
+    java.time.LocalDate.parse(
+            date,
+            java.time.format.DateTimeFormatter
+                    .ofPattern("uuuu-MM-dd")
+                    .withResolverStyle(
+                            java.time.format.ResolverStyle.STRICT));
+
+} catch (java.time.format.DateTimeParseException e) {
+
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Invalid date! Please use YYYY-MM-DD format.");
+    return;
+}
 
     job = new ScheduledRepair(
             jobId, customer, device, problem, date, time);
