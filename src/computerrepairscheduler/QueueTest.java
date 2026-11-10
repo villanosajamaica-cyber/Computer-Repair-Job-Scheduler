@@ -65,5 +65,23 @@ RepairJobQueue smallQueue = new RepairJobQueue(1);
 System.out.println("Add first job: " + smallQueue.enqueue(job1));
 System.out.println("Add second job: " + smallQueue.enqueue(job2));
 System.out.println("Is queue full: " + smallQueue.isFull());
+
+// Test circular queue behavior
+System.out.println("\nTEST CIRCULAR QUEUE:");
+
+RepairJobQueue circularQueue = new RepairJobQueue(2);
+
+System.out.println("Add J001: " + circularQueue.enqueue(job1));
+System.out.println("Add J002: " + circularQueue.enqueue(job2));
+
+System.out.println("Remove: " + circularQueue.dequeue());
+
+System.out.println("Add J003: " + circularQueue.enqueue(
+        new UrgentRepair(
+                "J003", "Customer Three", "Laptop",
+                "Battery problem", "Medium")));
+
+System.out.println("\nCIRCULAR QUEUE CONTENT:");
+System.out.println(circularQueue.displayAll());
     }
 }
