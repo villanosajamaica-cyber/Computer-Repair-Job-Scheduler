@@ -76,6 +76,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         cmbRepairType.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         cmbRepairType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Scheduled Repair", "Urgent Repair" }));
+        cmbRepairType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbRepairTypeActionPerformed(evt);
+            }
+        });
 
         lblUrgencyLevel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lblUrgencyLevel.setText("Urgency Level");
@@ -327,6 +332,22 @@ try {
             "Invalid date! Please use YYYY-MM-DD format.");
     return;
 }
+// Validate appointment time
+try {
+    java.time.LocalTime.parse(
+            time,
+            java.time.format.DateTimeFormatter
+                    .ofPattern("hh:mm a")
+                    .withResolverStyle(
+                            java.time.format.ResolverStyle.STRICT));
+
+} catch (java.time.format.DateTimeParseException e) {
+
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Invalid time! Please use hh:mm AM/PM format (e.g. 09:00 AM).");
+    return;
+}
 
     job = new ScheduledRepair(
             jobId, customer, device, problem, date, time);
@@ -386,6 +407,10 @@ javax.swing.JOptionPane.showMessageDialog(
 
 txtRecords.setText(queue.displayAll());
     }//GEN-LAST:event_btnRemoveNextActionPerformed
+
+    private void cmbRepairTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbRepairTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbRepairTypeActionPerformed
 
     public static void main(String args[]) {
 
